@@ -23,15 +23,7 @@
             min-height: 100vh;
         }
 
-        /* CONTAINER */
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            padding: 0 20px;
-            margin: 0 auto;
-        }
-
-        /* HEADER - TAM ORTALANMIŞ */
+        /* HEADER STİLLERİ */
         header {
             width: 100%;
             background-color: #6c5ce7;
@@ -45,6 +37,56 @@
             min-height: 300px;
         }
 
+        .header-container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        .welcome-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        /* ARA ÇUBUĞU */
+        .search-box {
+            display: flex;
+            align-items: center;
+        }
+        
+        .search-box input {
+            padding: 8px 15px;
+            border: 2px solid white;
+            background-color: rgba(255,255,255,0.2);
+            color: white;
+            border-radius: 20px;
+            outline: none;
+            width: 200px;
+            transition: all 0.3s ease;
+        }
+        
+        .search-box input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .search-box input:focus {
+            width: 250px;
+            background-color: rgba(255,255,255,0.3);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        
+        .search-box button {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin-left: -35px;
+            z-index: 1;
+        }
+
         header h1 {
             font-size: 3rem;
             margin-bottom: 20px;
@@ -53,9 +95,16 @@
 
         header p {
             font-size: 1.5rem;
-            max-width: 600px;
-            margin: 0 auto;
             line-height: 1.6;
+            margin: 0;
+        }
+
+        /* CONTAINER */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 20px;
+            margin: 0 auto;
         }
 
         /* ANA İÇERİK */
@@ -162,6 +211,19 @@
 
         /* MOBİL UYUMLULUK */
         @media (max-width: 768px) {
+            .welcome-section {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .search-box input {
+                width: 180px;
+            }
+            
+            .search-box input:focus {
+                width: 200px;
+            }
+            
             header {
                 padding: 40px 0;
                 min-height: 200px;
@@ -171,7 +233,6 @@
             }
             header p {
                 font-size: 1.2rem;
-                padding: 0 20px;
             }
             .social-links {
                 gap: 10px;
@@ -186,9 +247,15 @@
 <body>
     <!-- TAM ORTALANMIŞ HEADER -->
     <header>
-        <div class="container">
+        <div class="header-container">
             <h1>KrmPara</h1>
-            <p>Krmpara Hoş Geldiniz</p>
+            <div class="welcome-section">
+                <p>Krmpara Hoş Geldiniz</p>
+                <div class="search-box">
+                    <input type="text" placeholder="Ara...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -218,5 +285,23 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Arama kutusu işlevselliği (isteğe bağlı)
+        document.querySelector('.search-box button').addEventListener('click', function() {
+            const searchTerm = document.querySelector('.search-box input').value;
+            if(searchTerm.trim() !== '') {
+                alert('Arama yapılıyor: ' + searchTerm);
+                // Gerçek uygulamada burada arama işlemi yapılır
+            }
+        });
+        
+        // Enter tuşu ile arama
+        document.querySelector('.search-box input').addEventListener('keypress', function(e) {
+            if(e.key === 'Enter') {
+                document.querySelector('.search-box button').click();
+            }
+        });
+    </script>
 </body>
 </html>
