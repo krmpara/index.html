@@ -1,22 +1,130 @@
-<footer>
-    <div class="footer-container">
-        <div class="footer-brand">
-            <span class="logo">KrmPara®</span>
-        </div>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrmPara® - Kripto Dünyası</title>
+    <style>
+        /* RESET VE TEMEL STİLLER */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         
-        <div class="footer-social">
-            <a href="#" target="_blank">Instagram</a>
-            <a href="#" target="_blank">Twitter</a>
-            <a href="#" target="_blank">Kick</a>
-            <a href="#" target="_blank">Bluesky</a>
-            <a href="#" target="_blank">YouTube</a>
-            <a href="#" target="_blank">Discord</a>
-            <a href="#" target="_blank">Instagram Kestit</a>
-            <a href="#" target="_blank">TikTok Kestit</a>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center; /* Tüm içeriği yatayda ortala */
+        }
+
+        /* CONTAINER */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* İçerikleri ortala */
+        }
+
+        /* HEADER */
+        header {
+            width: 100%;
+            background-color: #6c5ce7;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* ANA İÇERİK */
+        main {
+            flex: 1;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* FOOTER */
+        footer {
+            width: 100%;
+            background-color: #000;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .footer-social a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* DİĞER STİLLER */
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>KrmPara®</h1>
+            <p>Kripto Para Dünyasına Hoş Geldiniz</p>
         </div>
-        
-        <div class="footer-copyright">
-            © 2025 <strong>KrmPara®</strong>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Ana Sayfa İçeriği</h2>
+            <p>Bu alana kripto verilerinizi, grafiklerinizi veya diğer içeriklerinizi ekleyebilirsiniz.</p>
+            <!-- İçerik buraya gelecek -->
         </div>
-    </div>
-</footer>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-brand">
+                <span class="logo">KrmPara®</span>
+            </div>
+            
+            <div class="footer-social">
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">Twitter</a>
+                <a href="#" target="_blank">Kick</a>
+                <a href="#" target="_blank">Bluesky</a>
+                <a href="#" target="_blank">YouTube</a>
+                <a href="#" target="_blank">Discord</a>
+                <a href="#" target="_blank">Instagram Kestit</a>
+                <a href="#" target="_blank">TikTok Kestit</a>
+            </div>
+            
+            <div class="footer-copyright">
+                © 2025 <strong>KrmPara®</strong>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
